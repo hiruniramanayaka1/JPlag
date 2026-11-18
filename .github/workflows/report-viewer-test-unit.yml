@@ -31,6 +31,8 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "lts/*"
+          cache: npm
+          cache-dependency-path: report-viewer/package-lock.json
 
       - name: Install
         working-directory: report-viewer
